@@ -21,7 +21,10 @@ export default {
 <style scoped>
 .card {
     width: calc(100% / 5 - 13px);
-    background-color: goldenrod;
+    background-image: url(https://katsgoneglobal.com/wp-content/uploads/2021/06/Map-of-Scotland.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
     padding: 20px;
     margin: 5px;
 }
@@ -32,6 +35,6 @@ h1 {
 
 h3 {
     font-size: 15px;
-    color: rgb(58, 54, 54)
+    color: black
 }
 </style>
