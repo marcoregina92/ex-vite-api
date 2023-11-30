@@ -30,11 +30,26 @@ export default {
 
 
 <template>
-  <AppBreweryCard v-for="brewery in store.breweries" :brewery="brewery" />
+  <main>
+    <h1>Le Birrerie più famose della Scozia </h1>
+    <div class="cardWrapped">
+      <AppBreweryCard v-for="brewery in store.breweries" :brewery="brewery" />
+    </div>
+  </main>
 </template>
 
 
 
 
 
-<style scoped></style>
+<style scoped>
+.cardWrapped {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+}
+</style>
