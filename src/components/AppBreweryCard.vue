@@ -20,13 +20,18 @@ export default {
 
 <style scoped>
 .card {
-    width: calc(100% / 5 - 16px);
+    width: calc(100% / 5 - 13px);
     background-color: goldenrod;
-    padding: 3px;
+    padding: 20px;
     margin: 5px;
 }
 
+h1 {
+    font-size: 20px;
+}
+
 h3 {
+    font-size: 15px;
     color: rgb(58, 54, 54)
 }
 </style>
