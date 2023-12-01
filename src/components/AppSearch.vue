@@ -28,7 +28,7 @@ export default {
 
 <template>
     <div>
-        <input v-model="store.searchString" type="text" placeholder="Cerca">
+        <input v-model="store.searchString" @keyup="$emit('search')" type="text" placeholder="Cerca">
         <button @click="search">Search by Postal Code</button>
     </div>
 </template>
