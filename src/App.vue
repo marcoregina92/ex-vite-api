@@ -28,6 +28,13 @@ export default {
       )
     },
     cerca() {
+      let indirizzo = `${this.store.brewApi}&by_postal=${this.store.searchString}`
+      console.log(indirizzo);
+
+      axios.get(indirizzo).then(result => {
+        this.store.breweries = result.data;
+      });
+
       console.log("il padre ha saputo che il componente avvia la ricerca")
 
     }

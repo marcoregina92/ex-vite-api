@@ -8,12 +8,11 @@ export default {
     data() {
         return {
             store,
-            searchString: ""
         }
     },
     methods: {
         search() {
-            console.log("Cerca: ", this.searchString)
+            console.log("Cerca: ", this.store.searchString)
             this.$emit("search")
         },
     },
@@ -29,7 +28,7 @@ export default {
 
 <template>
     <div>
-        <input v-model="searchString" type="text" placeholder="Cerca">
+        <input v-model="store.searchString" type="text" placeholder="Cerca">
         <button @click="search">Search by Postal Code</button>
     </div>
 </template>
