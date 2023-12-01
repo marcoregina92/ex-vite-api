@@ -28,7 +28,7 @@ export default {
       )
     },
     cerca() {
-      let indirizzo = `${this.store.brewApi}&by_postal=${this.store.searchString}`
+      let indirizzo = `${this.store.brewApi}&by_postal=${this.store.searchString.toUpperCase()}`
       console.log(indirizzo);
 
       axios.get(indirizzo).then(result => {
