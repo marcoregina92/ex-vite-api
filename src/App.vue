@@ -2,10 +2,13 @@
 import axios from 'axios';
 import { store } from "./store.js"
 import AppBreweryCard from './components/AppBreweryCard.vue';
+import AppSearch from './components/AppSearch.vue';
+
 
 export default {
   components: {
-    AppBreweryCard
+    AppBreweryCard,
+    AppSearch
   },
   data() {
     return {
@@ -23,13 +26,21 @@ export default {
         this.store.breweries = result.data;
       }
       )
+    },
+    cerca() {
+      console.log("il padre ha saputo che il componente avvia la ricerca")
+
     }
+
   }
 }
 </script>
 
 
 <template>
+  <header>
+    <AppSearch @search="cerca" />
+  </header>
   <main>
     <h1>Le Birrerie più famose della Scozia </h1>
     <div class="cardWrapped">
