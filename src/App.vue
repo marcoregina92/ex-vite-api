@@ -17,7 +17,6 @@ export default {
   },
   mounted() {
     this.breweryList();
-    console.log(this.store)
   },
   methods: {
 
@@ -29,14 +28,10 @@ export default {
     },
     cerca() {
       let indirizzo = `${this.store.brewApi}&by_postal=${this.store.searchString.toUpperCase()}`
-      console.log(indirizzo);
 
       axios.get(indirizzo).then(result => {
         this.store.breweries = result.data;
       });
-
-      console.log("il padre ha saputo che il componente avvia la ricerca")
-
     }
 
   }
