@@ -37,4 +37,21 @@ export default {
 
 
 
-<style scoped></style>
+<style scoped>
+input {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+button {
+    padding: 5px;
+    color: goldenrod;
+    background-color: black;
+    border-radius: 10px;
+    border: 2px solid goldenrod;
+    cursor: pointer;
+    font-size: 10px;
+}
+</style>

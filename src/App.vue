@@ -40,11 +40,10 @@ export default {
 
 
 <template>
-  <header>
-    <AppSearch @search="cerca" />
-  </header>
   <main>
     <h1>Le Birrerie più famose della Scozia </h1>
+    <AppSearch @search="cerca" />
+
     <div class="cardWrapped">
       <AppBreweryCard v-for="brewery in store.breweries" :brewery="brewery" />
     </div>
